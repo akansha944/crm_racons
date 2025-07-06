@@ -1,24 +1,37 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Sidebar from './components/Sidebar';
+import Topbar from './components/Topbar';
+import Dashboard from './pages/Dashboard';
+import Clients from './pages/Clients';
+import Leads from './pages/Leads';
+import Tasks from './pages/Tasks';
+import Projects from './pages/Projects';
+import Support from './pages/Support';
+import Reports from './pages/Reports';
+import Settings from './pages/Settings';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div style={{ display: 'flex' }}>
+        <Sidebar />
+        <div style={{ flexGrow: 1 }}>
+          <Topbar />
+          <div style={{ padding: '20px', flexGrow: 1 }}>
+            <Routes>
+              <Route path="/" element={<Dashboard />} />
+              <Route path="/Leads" element={<Leads />} />
+              <Route path="/Clients" element={<Clients />} />
+              <Route path="/Projects" element={<Projects />} />
+              <Route path="/Tasks" element={<Tasks />} />
+              <Route path="/Support" element={<Support />} />
+              <Route path="/Reports" element={<Reports />} />
+              <Route path="/Settings" element={<Settings />} />
+            </Routes>
+          </div>
+        </div>
+      </div>
+    </Router>
   );
 }
 

@@ -1,0 +1,114 @@
+.support-container {
+  padding: 24px;
+  background-color: #f9fafb;
+  min-height: 100vh;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.support-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.support-header h2 {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.new-ticket-button {
+  background-color: #1e40af;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 8px;
+  border: none;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.new-ticket-button:hover {
+  background-color: #1a2e96;
+}
+
+.filters {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+  align-items: center;
+  background: #e5e7eb;
+  padding: 12px;
+  border-radius: 12px;
+}
+
+.filters input,
+.filters select {
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  background-color: white;
+  flex-grow: 1;
+  min-width: 160px;
+}
+
+.reset-button {
+  background: none;
+  border: none;
+  color: #1e40af;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.ticket-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.ticket-table th, .ticket-table td {
+  text-align: left;
+  padding: 14px 18px;
+  font-size: 15px;
+  border-bottom: 1px solid #eee;
+}
+
+.ticket-table th {
+  background-color: #f4f6f8;
+  font-weight: 600;
+  color: #333;
+}
+
+.status-tag {
+  padding: 6px 10px;
+  border-radius: 12px;
+  font-weight: 500;
+  font-size: 12px;
+  display: inline-block;
+  white-space: nowrap;
+}
+
+.status-tag.open {
+  background-color: #fff3cd;
+  color: #856404;
+}
+
+.status-tag.in-progress {
+  background-color: #cce5ff;
+  color: #004085;
+}
+
+.status-tag.medium {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.status-tag.low {
+  background-color: #f8d7da;
+  color: #721c24;
+}
